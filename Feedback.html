@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Client</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="./css/transforms.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets --> 
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <style>
+         .form-container {
+              width: 60%;
+              max-width: 600px; /* Ensure the form doesn't become too wide */
+              background: rgb(149, 180, 188);
+              padding: 40px;
+              border-radius: 25px; /* Large round corners */
+              box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Larger shadow */
+              transition: all 0.3s ease; /* Smooth transition for hover effects */
+              text-align: center;
+          }
+  
+          /* Hover effect for container */
+          .form-container:hover {
+              transform: scale(1.05); /* Slight scale-up on hover */
+              box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+          }
+  
+          /* Heading styling */
+          h1 {
+              color: #333;
+              margin-bottom: 30px;
+          }
+  
+          /* Form-row layout */
+          .form-row {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 20px;
+          }
+  
+          /* Label styling */
+          .form-row label {
+              flex: 1;
+              text-align: right;
+              margin-right: 20px; /* Larger space between label and input */
+              color: #555;
+              font-weight: bold; /* Bold labels for emphasis */
+          }
+  
+          /* Input field styling */
+          .form-row input {
+              flex: 2; /* Input fields take more space */
+              padding: 10px;
+              border: 1px solid #ccc;
+              border-radius: 15px; /* Round input fields */
+              transition: all 0.3s ease; /* Smooth transition for hover effects */
+        
+          }
+  
+          /* Input focus effect */
+          .form-row input:focus {
+              border-color: #7a8c96;
+              outline: none;
+              box-shadow: 0 0 10px rgba(0, 170, 255, 0.25); /* Soft glow on focus */
+          }
+  
+          /* Submit button styling */
+          .btn {
+              padding: 12px 25px; /* Larger button with rounded edges */
+              background: linear-gradient(to right, #00aaff, #0055ff); /* Gradient color */
+              color: white;
+              border: none;
+              border-radius: 15px;
+              cursor: pointer;
+              transition: all 0.3s ease; /* Smooth hover effect */
+          }
+  
+          /* Hover effect for button */
+          .btn:hover {
+              background: linear-gradient(to right, #0055ff, #00aaff); /* Reverse gradient on hover */
+              box-shadow: 0 10px 20px rgba(0, 85, 255, 0.3); /* Shadow on hover */
+          }
+       </style>
+      
+      
+   </head>
+   <body>
+      <!-- header section start -->
+      <div class="header_section">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <span style="top:10%;" class="menu-btn" onclick="openMenu()">&#9776;</span>
+
+            <!-- Side menu -->
+            <div id="mySideMenu" class="side-menu">
+              <!-- Button to close the menu -->
+              <a class="close-menu" href="javascript:void(0)" onclick="closeMenu()">&times;</a>
+                <!-- Menu items -->
+                <a href="#logout">Log Out</a>
+                <a href="MyProfile.php">View Profile</a>
+               <a href="#book-appointment">Book Appointment</a>
+             </div>
+            <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="./JoinUs.html">JoinUs</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="./display_doctors.php">Doctors</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="aboutuss.html">About us</a>
+                  </li>
+                  <li class="nav-item active">
+                     <a class="nav-link" href="Feedback.html">Feedback</a>
+                  </li>
+                  <li class="nav-item ">
+                     <a class="nav-link" href="Appoinments.html">Appoinments</a>
+                  </li>
+                  <li>
+                     <div class="toggle-container">
+                        <input type="checkbox" class="sr-only" id="darkmode-toggle">
+                        <label for="darkmode-toggle" class="toggle">
+                          <span>Toggle dark mode</span>
+                        </label>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </div>
+      <!-- header section end -->
+      <!-- client section start -->
+      
+      
+            
+            <div class="knowledge_main">
+               <div class="doc">                     
+                 
+                    
+                  <center>
+            <form class="form-container" action="./insertintofeed.php" method="post"> 
+               <h1 class="book_text">Add Your Feedback!!</h1>
+               <div class="form-row">
+                  <label for="patient_name">PatientName:</label>
+               <input type="text" class="Email_text" placeholder="Your Name" name="patient_name">
+               </div>
+               <div class="form-row">
+                  <label for="doctor_name">DoctorName:</label>
+               <input type="text" class="Email_text" placeholder="Doctor Name" name="doctor_name">
+               </div>
+               <div class="form-row">
+                  <label for="appointment_time">AppointmentTime:</label>
+               <input type="time" class="Email_text" name="appointment_time">
+               </div>
+               <div class="form-row">
+                  <label style="text-align: left;" for="appointment_time">Describe Your Experience:</label>
+               <textarea class="massage-bt" placeholder="Describe Your Experience" rows="5" id="comment" name="feedback"></textarea>
+               </div>
+               <div class="form-row">
+               <select class="rating" name="rating">
+                   <option value="1">&#x2605;&#x2606;&#x2606;&#x2606;&#x2606;</option>
+                   <option value="2">&#x2605;&#x2605;&#x2606;&#x2606;&#x2606;</option>
+                   <option value="3">&#x2605;&#x2605;&#x2605;&#x2606;&#x2606;</option>
+                   <option value="4">&#x2605;&#x2605;&#x2605;&#x2605;&#x2606;</option>
+                   <option value="5">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</option>
+               </select>
+            </div>
+            <div class="form-row">
+               <input style=" padding: 10px 20px; background-color: #008d8d; color: #fff;  float: right; border-radius: 15px; "type="submit" value="Submit"/>
+            </div>
+           </form>
+           </center>
+                     </div>
+     </div>  
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+       var selectElement = document.querySelector('.rating');
+       selectElement.addEventListener('change', function() {
+           var selectedValue = this.value;
+           // Here you can send the selected value to the server or perform any other action
+           console.log('Selected rating: ' + selectedValue);
+       });
+   });
+</script>
+          
+         </div>
+      </div>
+      </form>
+      <div  class="client_section layout_padding">
+         <div id="my_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container">
+                     <h1 class="client_taital">What People Say</h1>
+                     <p class="client_text">Take a look at our clinets Feedbacks</p>
+                     <div class="client_section_2">
+                        <div class="client_right">
+                           <h3 class="distracted_text">Omar mohamed</h3>
+                           <p class="lorem_text">"I've been using DocMate for a while now, and it has helped me make sense of my symptoms and decide whether I need to see a doctor. Highly recommended!"</p>
+                          
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <h1 class="client_taital">What People Say</h1>
+                     <p class="client_text">Take a look at our clinets Feedbacks</p>
+                     <div class="client_section_2">
+                        <div class="client_right">
+                           <h3 class="distracted_text">Layla Hassan</h3>
+                           <p class="lorem_text">"The interface is clean and user-friendly. DocMate provides personalized health insights and recommendations based on your symptoms. It's a valuable tool for anyone who wants to take control of their health."</p>
+                           
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <h1 class="client_taital">What People Say</h1>
+                     <p class="client_text">Take a look at our clinets Feedbacks</p>
+                     <div class="client_section_2">
+                        <div class="client_right">
+                           <h3 class="distracted_text">Fatima Ahmed</h3>
+                           <p class="lorem_text">"I've used DocMate for both medical and mental health appointments, and I've been impressed with the quality of care each time. The app is easy to use, and the doctors really take the time to listen to your concerns. It's a game-changer for busy professionals like myself."</p>
+                           
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <a id="feedprev" class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
+               <i class="fa fa-long-arrow-left" style="font-size:24px; padding-top: 4px;"></i>
+               </a>
+               <a id="feednext" id="nextt" class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+               <i class="fa fa-long-arrow-right" style="font-size:24px; padding-top: 4px;"></i>
+               </a>
+            </div>
+         </div>
+      <!-- client section end -->
+      <!-- footer section start -->
+      <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-3 col-sm-6">
+                  <div class="footer_logo"><a href="index.html"><img src="images/logo.png"></a></div>
+                  <h1 class="adderss_text">Contact Us</h1>
+                  <div class="map_icon"><img src="images/call-icon.png"><span class="paddlin_left_0">+2001007459852</span></div>
+                  <div class="map_icon"><img src="images/mail-icon.png"><span class="paddlin_left_0">DocMate@gmail.com</span></div>
+               </div>
+               <div class="col-lg-3 col-sm-6">
+                  <h1 class="adderss_text"><a style="color: white;" href="./Doctors.html">Doctors</h1>
+                  <div class="hiphop_text_1">"Medicine is not only a science; it is also an art. It does not consist of compounding pills and plasters; it deals with the very processes of life, which must be understood before they may be guided."</div>
+               </div>
+               <div class="col-lg-3 col-sm-6">
+                  <h1 class="adderss_text">Useful Links</h1>
+                  <div class="Useful_text">
+                     <a style="color: aliceblue;" href="home.html">Home</a><br>
+                  </div>
+                     <div class="Useful_text"> 
+                  <a style="color: aliceblue;" href="./JoinUs.html">JoinUs</a><br>
+                     </div>
+                  <div class="Useful_text"> 
+                  <a style="color: aliceblue;" href="./display_doctors.php">Doctors</a><br>
+                  </div>
+                  <div class="Useful_text"> 
+                  <a style="color: aliceblue;" href="Appoinments.html">Appoinments</a>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-sm-6">
+                  <h1 class="adderss_text">More Of Us</h1>
+                  <input type="text" class="Enter_text" placeholder="Enter your Email" name="Enter your Email">
+                  <div class="subscribe_bt"><a href="#">Subscribe</a></div>
+                 <div class="subscribe_bt"><a href="./aboutuss.html">about us</a>
+                 </div> 
+                 <div class="social_icon">
+                  <ul class="iconss" >
+                     <li class="social"> <a href="https://www.facebook.com/profile.php?id=61558117094784"><img src="images/fb-icon.png"></a></li>
+                     <li class="social"> <a href="https://twitter.com/Doc_Matee"><img src="images/twitter-icon.png"></a></li>
+                     <li class="social"> <a href="#"><img src="images/linkedin-icon.png"></a></li>
+                     <li class="social"> <a href="#"><img src="images/instagram-icon.png"></a></li>
+                  </ul>
+            </div>
+            </div>
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">Copyright © 2024 All rights reserved | Developed by <a href="https://aast.edu/en/">aast students</a></p>
+         </div>
+      </div>
+    
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="./script.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      <script>
+         document.addEventListener("DOMContentLoaded", function() {
+  var darkmodeToggle = document.getElementById("darkmode-toggle");
+
+  darkmodeToggle.addEventListener("change", function() {
+   if (darkmodeToggle.checked) {
+     document.body.classList.add("dark-theme"); // Add dark theme class
+   } else {
+     document.body.classList.remove("dark-theme"); // Remove dark theme class
+   }
+ });
+
+ // Optional: If you want to persist the dark mode setting across sessions
+ var isDarkMode = localStorage.getItem("dark-mode") === "true";
+ darkmodeToggle.checked = isDarkMode; // Set checkbox state based on local storage
+ if (isDarkMode) {
+   document.body.classList.add("dark-theme");
+ }
+
+ darkmodeToggle.addEventListener("change", function() {
+   var isChecked = darkmodeToggle.checked;
+   localStorage.setItem("dark-mode", isChecked); // Store the checkbox state
+ });
+});
+  </script>
+   </body>
+</html>

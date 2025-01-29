@@ -1,0 +1,140 @@
+
+.navbar-nav .nav-item {
+   transition: transform 0.3s ease; /* Add transition for smooth effect */
+}
+
+.navbar-nav .nav-item:hover {
+   transform: scale(1.2); /* Increase the size on hover */
+}
+.Useful_text {
+   transition: transform 0.3s ease;
+}
+.Useful_text:hover {
+   transform: scale(1.2);
+}
+
+ .iconss .social{
+   transition: transform 0.3s ease;
+ }
+ .iconss .social:hover{
+   transform: scale(1.2);
+ }
+ .subscribe_bt{
+   transition: transform 0.3s ease; 
+ }
+.subscribe_bt:hover{
+   transform: scale(1.2);
+}
+.mmain{
+   text-align: center;
+   padding: 150px;
+   margin: 10px;
+ 
+}
+.send_bt {
+
+   width: 200%;
+}
+.send_bt2 {
+ height: 30%;
+ margin-top: 10px;
+  justify-content: center;
+   display: flex ;
+   justify-items: center;
+   padding: 10px 20px;
+   background-color: #008d8d;
+   color: #fff;
+   text-decoration: none;
+   border-radius: 15px;
+}
+
+
+.massage-bt {
+   margin-bottom: 35px; /* Add space below the textarea */
+}
+
+.carousel-control-prev {
+   left: 10px; /* Adjust the position of the left arrow */
+}
+
+.carousel-control-next {
+   right: initial; /* Reset the right position */
+   left: unset; /* Reset the left position */
+}
+
+.carousel-control-prev, .carousel-control-next {
+   top: 50%; /* Center vertically */
+   transform: translateY(-50%);
+}
+
+.carousel-item .container {
+   max-width: 1000px; /* Set maximum width for the container */
+   margin: auto; /* Center the container horizontally */
+}
+
+.lorem_text {
+   height: 500px; /* Adjust the height of the iframe */
+}
+.adderss_text{
+   transition: transform 0.3s ease;
+   color:white;
+}
+.adderss_text:hover{
+   transform: scale(1.2);
+}
+.box_main{
+   transition: transform 0.3s ease;  
+   padding: 50px;
+   
+}
+.box_main:hover{
+   transform: scale(1.2);
+}
+.news_section{
+   background-color: #D0EDED;
+}
+.contact_section{
+   background-color: #D0EDED;
+}
+#main{
+
+      background: linear-gradient(90deg,  #008d8d 0%, rgba(255,255,255,1) 100%);
+}
+#prevv
+{
+   margin:  100px; /* Adjust the distance from the left edge */
+   padding:  100spx; /* Reset the right positioning */
+}
+#nextt{
+   margin:  100px; /* Adjust the distance from the left edge */
+   padding:  100spx; /* Reset the right positioning */
+}
+
+.rating {
+   
+   justify-content: space-between;
+   margin-bottom: 20px;
+ }
+.star {
+   font-size: 24px;
+   cursor: pointer;
+ }
+.star:hover {
+   color: #ffd700;
+ }
+.stars {
+   font-size: 18px;
+   color: #666;
+ }
+ .send_bt3 {
+   height: 30%;
+   margin-top: 10px;
+    justify-content: center;
+     display: flex ;
+     padding: 10px 20px;
+     background-color: #008d8d;
+     color: #fff;
+     text-decoration: none;
+     border-radius: 15px;
+  }
+ 

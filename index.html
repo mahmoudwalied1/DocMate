@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>HomeCare</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">   
+   <meta name="author" content="">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- style css -->
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="./css/transforms.css">
+   <link rel="stylesheet" href="./Dark-mode.css">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="css/responsive.css">
+   <!-- fevicon -->
+   <link rel="icon" href="images/fevicon.png" type="image/gif" />
+   <!-- Scrollbar Custom CSS -->
+   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+   <!-- Tweaks for older IEs-->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   <!-- owl stylesheets -->
+   <link rel="stylesheet" href="css/owl.carousel.min.css">
+   <link rel="stylesheet" href="css/owl.theme.default.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   
+   <!-- JavaScript for dark mode toggle -->
+   
+
+</head>
+
+<body>
+   <script>
+      console.log('Login status:', loginStatus);
+      // Function to get query parameters from URL
+      function getQueryParam(name) {
+          const urlParams = new URLSearchParams(window.location.search);
+          return urlParams.get(name);
+      }
+
+      // Check if the login parameter is present and equals "success"
+      const loginStatus = getQueryParam('login');
+      if (loginStatus === 'success') {
+          // Display a success message
+          alert('Login successful!');
+      }
+  </script>
+<!-- header section start -->
+<div id="content">
+   <div class="header_section">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <div class="logo"><img src="images/logo.png"></div>
+         <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div  class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul  class="navbar-nav mr-auto">
+               <li  class="nav-item active">
+                  <a  class="nav-link" href="#">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="./JoinUs.html">JoinUs</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="./display_doctors.php">Doctors</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="aboutuss.html">About us</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="Feedback.html">Feedback</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#contact_section layout_padding">Appoinments</a>
+               </li>
+               <li>
+                  <div class="toggle-container">
+                     <input type="checkbox" class="sr-only" id="darkmode-toggle">
+                     <label for="darkmode-toggle" class="toggle">
+                       <span>Toggle dark mode</span>
+                     </label>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <span class="menu-btn" onclick="openMenu()">&#9776;</span>
+
+      <!-- Side menu -->
+      <div id="mySideMenu" class="side-menu">
+       <!-- Button to close the menu -->
+       <a class="close-menu" href="javascript:void(0)" onclick="closeMenu()">&times;</a>
+       <!-- Menu items -->
+       <a href="./login.html">Log Out</a>
+       <a href="MyProfile.php">View Profile</a>
+       <a href="./Appoinments.html">Book Appointment</a>
+      </div>
+      <!-- header section end -->
+      <!-- banner section start -->
+      <div  id="main_slider" class="carousel slide" data-ride="carousel">
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <div class="banner_section">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <h1 class="banner_taital" style="color: white;">Health <br><span>Care</span></h1>
+                            <p class="banner_text">Explore the myriad facets of health and well-being</p>
+                               <div class="btn_main">
+                                  <!-- Add this HTML code where you want the button to appear -->
+                                  <div class="more_bt" onclick="togglePopup()"><a href="#">Contact Now</a></div>
+
+                                 <div id="myPopup" class="popup">
+                                    <!-- Add your contact information here -->
+                                    <h2><b>Contact Us On</b></h2>
+                                    <p >Phone: +201025893980</p>
+                                    <p>Email:<a href="#"> DocMate@gmail.com</a></p>
+                                    <p>Facebook:<a href="#"> DocMate</a></p>
+                                    <p>Instagram:<a href="#"> DocMate</a></p>
+                                    <!-- Add a close button to close the popup -->
+                                    <span class="close" onclick="togglePopup()">&times;</span>
+                                 </div>
+
+                                            
+                        </div>
+                    </div>
+                        <div class="col-md-6">
+                           <div class="image_1"><img src="images/img-1.png"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <div class="banner_section">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <h1 class="banner_taital"  style="color: white;">Our <br><span>Team</span></h1>
+                          <p class="banner_text">Take a look at our doctors!</p>
+                           <div class="btn_main">
+                              <div class="more_bt"><a href="./Doctors.html">Doctors</a></div>
+                              
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="image_1"><img src="./images/doc.png" width="80%" height="80%"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div> 
+            <div class="carousel-item">
+               <div class="banner_section">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <h1 class="banner_taital"style="color: white;" >Our<br><span>Partners</span></h1>
+                           <p class="banner_text"> </p>
+                           <div class="btn_main">
+                              <div class="more_bt"><a href="#my_slider">Partners</a></div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div style="height: 85%; width:106%;" class="image_1"><img src="./images/dactra.png" ></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         <a style="color: white;" class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+            <i class="fa fa-long-arrow-left" style="font-size:24px; padding-top: 4px;"></i>
+         </a>
+         <a style="color: white;" class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+            <i  class="fa fa-long-arrow-right" style="font-size:24px; padding-top: 4px;"></i>
+         </a>
+      </div>
+   </div>
+   <!-- banner section end -->
+   
+   <!-- knowledge section end -->
+   
+  
+  
+   
+   <div class="news_section layout_padding">
+      <div  class="container">
+         <h1 class="health_taital">Why choose 24hr home care</h1>
+         <p class="health_text">labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+         <div class="news_section_2 layout_padding">
+            <div class="row">
+               <div class="col-lg-4 col-sm-6">
+                  <div class="box_main">
+                     <div class="icon_1"><img src="images/icon-2.png"></div>
+                     <h4 class="daily_text">Daily care experts</h4>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-6">
+                  <div class="box_main active">
+                     <div class="icon_1"><img src="images/icon-3.png"></div>
+                     <h4 class="daily_text_1">Available 24/7</h4>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-6">
+                  <div class="box_main">
+                     <div class="icon_1"><img src="images/icon-4.png"></div>
+                     <h4 class="daily_text_1">Balanced care</h4>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="getquote_bt"><a href="#">Get A Quote <span><img src="images/right-arrow.png"></span></a></div>
+      </div>
+   </div>
+   <!-- news section end -->
+   <!-- contact section start -->
+   <div  class="contact_section layout_padding" id="contact_section layout_padding">
+      <div class="container">
+         <h1 class="contact_taital">What we do</h1>
+         <div class="news_section_2">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="icon_main">
+                     <div class="icon_7"><img src="images/icon-7.png"></div>
+                     <h4 class="diabetes_text">Diabetes and obesity Counselling </h4>
+                  </div>
+                  <div class="icon_main">
+                     <div class="icon_7"><img src="images/icon-5.png"></div>
+                     <h4 class="diabetes_text">Obstetrics and Gynsecology</h4>
+                  </div>
+                  <div class="icon_main">
+                     <div class="icon_7"><img src="images/icon-6.png"></div>
+                     <h4 class="diabetes_text">Surgical and medical Oncology</h4>
+                  </div>
+               </div>
+               <div  class="mmain">
+                  <div class="icon_50">
+                     <div class="send_bt"><a href="./Appoinments.html">Book Appointment</a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- contact section end -->
+   <!-- client section start -->
+   <div class="client_section layout_padding">
+      <div id="my_slider" class="carousel slide" data-ride="carousel">
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <div class="container">
+                  <h1 class="client_taital">Our Partners</h1>
+                  <p class="client_text"> "Partnerships are the everyday magic of two hearts beating as one, navigating life's twists and turns with a shared sense of purpose and unwavering support."</p>
+                  <div class="client_section_2">
+                     <div class="client_left">
+                        <div><img src="./imageS/SH.png" class="client_img"></div>
+                     </div>
+                     <div class="client_right">
+                        <h3 class="distracted_text"><a href="https://shifaegypt.com/" target="Partners">Shifa hospital</a></h3>
+                        <p class="lorem_text"><iframe width="140%" height="100%" name="Partners"></iframe></p>
+                       
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <div class="container">
+                  <h1 class="client_taital">Our Partners</h1>
+                  <p class="client_text">"Partnerships are the everyday magic of two hearts beating as one, navigating life's twists and turns with a shared sense of purpose and unwavering support." </p>
+                  <div class="client_section_2">
+                     <div class="client_left">
+                        <div><img src="./images/NH.png" class="client_img"></div>
+                     </div>
+                     <div class="client_right">
+                          <h3 class="distracted_text"><a href="https://www.nih.com.eg/" target="Partner">Nozha hospital</a></h3>
+                        <p class="lorem_text"><iframe width="140%" height="100%" name="Partner"></iframe></p>
+                       </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
+            <i class="fa fa-long-arrow-left" style="font-size:24px; padding-top: 4px;"></i>
+         </a>
+         <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+            <i class="fa fa-long-arrow-right" style="font-size:24px; padding-top: 4px;"></i>
+         </a>
+      </div>
+   </div>
+   <!-- client section end -->
+   <!-- footer section start -->
+   <!-- about section start -->
+
+<!-- about section end -->
+ 
+   <div class="footer_section layout_padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-3 col-sm-6">
+               <div class="footer_logo"><a href="home.html"><img src="images/logo.png"></a></div>
+               <h1 class="adderss_text">Contact Us</h1>
+               <div class="map_icon"><img src="images/call-icon.png"><span class="paddlin_left_0">+201025893980</span></div>
+               <div class="map_icon"><img src="images/mail-icon.png"><span class="paddlin_left_0">DocMate@gmail.com</span></div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+               <h1 class="adderss_text" ><a  style="color: white;" href="./Doctors.html">Doctors</h1>
+               <div class="hiphop_text_1">"Medicine is not only a science; it is also an art. It does not consist of compounding pills and plasters; it deals with the very processes of life, which must be understood before they may be guided."</div>            </div>
+ 
+            <div class="col-lg-3 col-sm-6">
+               <h1 class="adderss_text">Useful Links</h1>
+               <div class="Useful_text"> 
+
+                  <a style="color: aliceblue;" href="./JoinUs.html">JoinUs</a><br>
+               </div>
+               <div class="Useful_text"> 
+                  <a style="color: aliceblue;" href="./display_doctors.php">Doctors</a><br>
+               </div>
+               <div class="Useful_text"> 
+                  <a style="color: aliceblue;" href="Feedback.html">Feedback</a><br>
+               </div>
+               <div class="Useful_text"> 
+                  <a style="color: aliceblue;"  href="Appoinments.html">Appoinments</a></div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+               <h1 class="adderss_text">More of us</h1>
+               <input type="text" class="Enter_text" placeholder="Enter your Email" name="Enter your Email">
+               <div class="subscribe_bt"><a href="#">Subscribe</a></div>
+              <div class="subscribe_bt" id="subscribe_bt"><a href="./aboutuss.html">about us</a>
+              </div>    
+              <div class="social_icon">
+                  <ul class="iconss" >
+                     <li class="social"> <a href="https://www.facebook.com/profile.php?id=61558117094784"><img src="images/fb-icon.png"></a></li>
+                     <li class="social"> <a href="https://twitter.com/Doc_Matee"><img src="images/twitter-icon.png"></a></li>
+                     <li class="social"> <a href="#"><img src="images/linkedin-icon.png"></a></li>
+                     <li class="social"> <a href="#"><img src="images/instagram-icon.png"></a></li>
+                  </ul>
+            </div>
+            </div>
+   <!-- footer section end -->
+   <!-- copyright section start -->
+   <div class="copyright_section">
+      <div class="container">
+         <p class="copyright_text">Copyright © 2024 All rights reserved | Developed by <a href="https://aast.edu/en/">aast students</a></p>
+      </div>
+   </div>
+</div>
+   <!-- copyright section end -->
+   <!-- Javascript files-->
+   <script src="js/jquery.min.js"></script>
+   <script src="./script.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/jquery-3.0.0.min.js"></script>
+   <script src="js/plugin.js"></script>
+   <!-- sidebar -->
+   <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+   <script src="js/custom.js"></script>
+   <!-- javascript -->
+   <script src="js/owl.carousel.js"></script>
+   <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   <script>
+          document.addEventListener("DOMContentLoaded", function() {
+   var darkmodeToggle = document.getElementById("darkmode-toggle");
+
+   darkmodeToggle.addEventListener("change", function() {
+    if (darkmodeToggle.checked) {
+      document.body.classList.add("dark-theme"); // Add dark theme class
+    } else {
+      document.body.classList.remove("dark-theme"); // Remove dark theme class
+    }
+  });
+
+  // Optional: If you want to persist the dark mode setting across sessions
+  var isDarkMode = localStorage.getItem("dark-mode") === "true";
+  darkmodeToggle.checked = isDarkMode; // Set checkbox state based on local storage
+  if (isDarkMode) {
+    document.body.classList.add("dark-theme");
+  }
+
+  darkmodeToggle.addEventListener("change", function() {
+    var isChecked = darkmodeToggle.checked;
+    localStorage.setItem("dark-mode", isChecked); // Store the checkbox state
+  });
+});
+   </script>
+  
+</body>
+</html>
